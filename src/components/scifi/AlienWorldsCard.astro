@@ -1,0 +1,42 @@
+---
+export interface Props {
+	title: string;
+	src: string;
+}
+
+const { title, src } = Astro.props;
+---
+
+<li class="link-card">
+	<div class="bg-blue-700">
+		<h2>
+			{title}
+		</h2>
+		<img src={src} alt=""/>
+		<div class="w-full flex grow justify-evenly items-center">
+			<a href="/tvshows/AlienWorlds/AlienWorldsS01EpiList">1</a>
+		</div>
+	</div>
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 0.15rem;
+		background-color: rgb(33, 156, 8);
+		background-image: var(--accent-gradient);
+		background-size: 400%;
+		border-radius: 0.5rem;
+		background-position: 100%;
+	}
+	h2 {
+		margin: 13px;
+		font-size: 1.25rem;
+		color: rgb(247, 243, 243);
+	}
+	a {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+		color: rgb(247, 243, 243);
+	}
+</style>

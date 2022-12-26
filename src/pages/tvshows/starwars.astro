@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/LayoutPage.astro";
+import AndorImg from '../../../images/starwars/Andor.webp';
+import AndorCard from "../../components/starwars/AndorCard.astro";
+import BadBatchImg from '../../../images/starwars/badbatch.webp';
+import BadBatchCard from "../../components/starwars/BadBatchCard.astro";
+import BookOfBobaFettImg from '../../../images/starwars/book_of_boba_fett.webp';
+import BookOfBobaFettCard from "../../components/starwars/BookOfBobaFettCard.astro";
+import MandalorianImg from '../../../images/starwars/mandalorian.webp';
+import MandalorianCard from "../../components/starwars/MandalorianCard.astro";
+import ObiWanKenobiImg from '../../../images/starwars/obi-wankenobi.webp';
+import ObiWanKenobiCard from "../../components/starwars/ObiWanKenobiCard.astro";
+import VisionsImg from '../../../images/starwars/VisionsThumb.webp';
+import VisionsCard from "../../components/starwars/VisionsCard.astro";
+---
+
+<Layout title="MCU">
+    <main>
+        <div class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center">
+            <AndorCard title="Andor" src={AndorImg} />
+            <BookOfBobaFettCard title="Book Of BobaFett" src={BookOfBobaFettImg} />
+            <MandalorianCard title="Mandalorian" src={MandalorianImg} />
+            <ObiWanKenobiCard title="Obi Wan Kenobi" src={ObiWanKenobiImg} />
+            <VisionsCard title="Visions" src={VisionsImg} />
+            <BadBatchCard title="The Bad Batch" src={BadBatchImg} />
+        </div>
+    </main>
+</Layout>

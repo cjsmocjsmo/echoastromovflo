@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/LayoutPage.astro";
+import HouseOfTheDragonImg from '../../../images/fantasy/houseofthedragon.webp';
+import HouseOfTheDragonCard from "../../components/fantasy/HouseOfTheDragonCard.astro";
+import LordOfTheRingsImg from '../../../images/fantasy/thelordoftheringsringsofpower.webp'
+import LordOfTheRingsCard from "../../components/fantasy/LordOfTheRingsCard.astro";
+import WheelOfTimeImg from '../../../images/fantasy/wheeloftime.webp'
+import WheelOfTimeCard from '../../components/fantasy/WheelOfTimeCard.astro';
+---
+
+<Layout title="MCU">
+    <main>
+        <div class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center">
+            <HouseOfTheDragonCard src={HouseOfTheDragonImg} title="House Of The Dragon" />
+            <LordOfTheRingsCard src={LordOfTheRingsImg} title="Lord Of The Rings" />
+            <WheelOfTimeCard src={WheelOfTimeImg} title="Wheel Of Time" />
+        </div>
+    </main>
+</Layout>

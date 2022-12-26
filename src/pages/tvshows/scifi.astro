@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/LayoutPage.astro";
+import AlienWorldsImg from '../../../images/scifi/alienworlds.webp';
+import AlienWorldsCard from '../../components/scifi/AlienWorldsCard.astro';
+import AlteredCarbonImg from '../../../images/scifi/alteredcarbon.webp';
+import AlteredCarbonCard from '../../components/scifi/AlteredCarbonCard.astro';
+import CowboyBeBopImg from '../../../images/scifi/cowboy_bebop.webp';
+import CowboyBeBopCard from "../../components/scifi/CowboyBeBop.astro";
+import ForAllManKindImg from '../../../images/scifi/forallmankind.webp';
+import ForAllManKindCard from '../../components/scifi/ForAllManKindCard.astro';
+import FoundationImg from '../../../images/scifi/Foundation_1Thumb.webp';
+import FoundationCard from '../../components/scifi/FoundationCard.astro';
+import HaloImg from '../../../images/scifi/halo.webp';
+import HaloCard from "../../components/scifi/HaloCard.astro";
+import LostInSpaceImg from '../../../images/scifi/lostinspace.webp';
+import LostInSpaceCard from "../../components/scifi/LostInSpaceCard.astro";
+import NightSkyImg from '../../../images/scifi/nightsky.webp';
+import NightSkyCard from "../../components/scifi/NightSkyCard.astro";
+import OrvilleImg from '../../../images/scifi/orville.webp';
+import OrvilleCard from "../../components/scifi/OrvilleCard.astro";
+import RaisedByWolvesImg from '../../../images/scifi/raisedbywolves.webp';
+import RaisedByWolvesCard from "../../components/scifi/RaisedByWolvesCard.astro";
+---
+
+<Layout title="SciFi">
+    <main>
+        <div class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center">
+            <AlienWorldsCard title="Alien Worlds" src={AlienWorldsImg} />
+            <AlteredCarbonCard title="Altered Carbon" src={AlteredCarbonImg} />
+            <CowboyBeBopCard title="Cowboy BeBop" src={CowboyBeBopImg} />
+			<ForAllManKindCard title="For All Mankind" src={ForAllManKindImg} />
+			<FoundationCard title="Foundation" src={FoundationImg} />
+			<HaloCard title="Halo" src={HaloImg} />
+            <LostInSpaceCard title="Lost In Space" src={LostInSpaceImg} />
+            <NightSkyCard title="Night Sky" src={NightSkyImg} />
+            <OrvilleCard title="Orville" src={OrvilleImg} />
+            <RaisedByWolvesCard title="Raised By Wolves" src={RaisedByWolvesImg} />
+        </div>
+    </main>
+</Layout>

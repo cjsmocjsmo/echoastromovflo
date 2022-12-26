@@ -1,0 +1,41 @@
+---
+import Layout from "../../../layouts/LayoutPage.astro";
+const URL = "http://192.168.0.94:8888/StrangeNewWorlds?season=01";
+const response = await fetch(URL);
+const data = await response.json();
+ 
+---
+
+<Layout title="Episodes">
+    <main>
+        <div class="grid grid-cols-5 gap-2 flex items-center">
+            {
+                data.map((d) => (
+                    <div class="m-4">
+                        <button
+                            id={d.MediaID}
+                            class="bg-blue-400 p-3 text-white rounded text-xl"
+                        >
+                            {d.title}
+                        </button>
+                    </div>
+                ))
+            }
+        </div>
+    </main>
+</Layout>
+
+<script>
+    const URL2 = "http://192.168.0.94:8888/StrangeNewWorlds?season=01";
+    const response = await fetch(URL2);
+    const data2 = await response.json();
+    for (var i = 0; i < data2.length; i++) {
+        let ad = "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=";
+        let ad2 = "/media/pi/PiTB/media/TVShows/" + data2[i]["tvfspath"];
+        let addr = ad + ad2;
+        let action = document.getElementById(data2[i]["MediaID"]);
+        action.addEventListener("click", () => {
+            let response = fetch(addr);
+        });
+    }
+</script>

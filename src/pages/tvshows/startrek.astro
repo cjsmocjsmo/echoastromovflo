@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/LayoutPage.astro";
+import DiscoveryImg from "../../../images/startrek/discovery.webp";
+import DiscoveryCard from "../../components/startrek/DiscoveryCard.astro";
+import EnterpriseImg from '../../../images/startrek/enterprise.webp';
+import EnterpriseCard from "../../components/startrek/EnterpriseCard.astro";
+// import NextGenImg from '../../../images/startrek/nextgen.webp';
+// import NextGenCard from "../../components/startrek/NextGenCard.astro";
+import PicardImg from '../../../images/startrek/picard.webp';
+import PicardCard from "../../components/startrek/PicardCard.astro";
+import ProdigyImg from '../../../images/startrek/prodigyposter.webp';
+import ProdigyCard from "../../components/startrek/ProdigyCard.astro";
+import LowerDecksImg from '../../../images/startrek/lowerdecks.webp';
+import LowerDecksCard from "../../components/startrek/LowerDecksCard.astro";
+import StrangeNewWorldsImg from '../../../images/startrek/star_trek_strange_new_worlds.webp';
+import StrangeNewWorldsCard from "../../components/startrek/StrangeNewWorldCard.astro";
+import STTVImg from '../../../images/startrek/sttv.webp';
+import STTVCard from "../../components/startrek/STTVCard.astro";
+import VoyagerImg from '../../../images/startrek/voyager.webp';
+import VoyagerCard from "../../components/startrek/VoyagerCard.astro";
+---
+
+<Layout title="MCU">
+    <main>
+        <div class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center">
+            <EnterpriseCard src={EnterpriseImg} title="Enterprise" />
+            <!-- <NextGenCard src={NextGenImg} title="Next Generation" /> -->
+            <DiscoveryCard src={DiscoveryImg} title="Discovery" />
+            <PicardCard src={PicardImg} title="Picard" />
+            <LowerDecksCard src={LowerDecksImg} title="Lower Decks" />
+            <ProdigyCard src={ProdigyImg} title="Prodigy" />
+            <StrangeNewWorldsCard src={StrangeNewWorldsImg} title="Strange New Worlds" />
+            <STTVCard src={STTVImg} title="Star Trek" />
+            <VoyagerCard src={VoyagerImg} title="Voyager" />
+        </div>
+    </main>
+</Layout>

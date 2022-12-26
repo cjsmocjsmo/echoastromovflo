@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const response = await fetch("http://192.168.0.94:8888/Godzilla");
+const data = await response.json();
+---
+<Layout title="Godzilla">
+    <main>
+        <div class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center">
+            {
+                data.map((d) => (
+                    <div class="m-4">
+                        <img
+                            id={d.movname}
+                            src={d.httpthumbpath}
+                            class="max-w-full h-auto rounded-lg"
+                            alt={d.movname}
+                        />
+                    </div>
+                ))
+            }
+        </div>
+    </main>
+</Layout>
+<script>
+    let response = await fetch("http://192.168.0.94:8888/Godzilla")
+    let data = await response.json()
+    let addresses = []
+    for (var ii=0; ii < data.length; ii++) {
+        let foo = data[ii]["filepath"].split("/")
+        let boo = foo[5]
+        addresses.push(boo)
+    }
+    let ad = "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=";
+    let ad2 = "/media/pi/PiTB/media/Movies/Godzilla/";
+    for (var i = 0; i < addresses.length; i++) {
+        let addr = ad + ad2 + addresses[i];
+        let moviename = addresses[i].split(" ").join("");
+        let movsplit = moviename.split("(");
+        let fantasy = document.getElementById(movsplit[0]);
+        fantasy.addEventListener("click", () => {
+            let response = fetch(addr);
+        });
+    }
+</script>

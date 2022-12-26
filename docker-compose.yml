@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  astromovflo:
+    image: astromovflo:0.2.0
+    build: .
+    networks:
+      - astromovflo
+    ports:
+      - 7777:80
+
+networks:
+  astromovflo:
+
