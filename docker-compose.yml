@@ -2,12 +2,12 @@ version: "3.3"
 
 services:
   echoastromovflo:
-    image: echoastromovflo:0.2.0
+    image: echoastromovflo:0.2.1
     build: .
     networks:
       - echoastromovflo
     ports:
-      - 6666:80
+      - 9999:80
 
 networks:
   echoastromovflo:
