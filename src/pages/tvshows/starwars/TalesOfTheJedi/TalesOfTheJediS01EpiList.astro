@@ -1,6 +1,6 @@
 ---
 import Layout from "../../../../layouts/LayoutPage.astro";
-const URL = "http://192.168.0.94:8888/TNG?season=06";
+const URL = "http://192.168.0.94:8888/TalesOfTheJedi?season=01";
 const response = await fetch(URL);
 const data = await response.json();
  
@@ -26,7 +26,7 @@ const data = await response.json();
 </Layout>
 
 <script>
-    const URL2 = "http://192.168.0.94:8888/intTNG?season=06";
+    const URL2 = "http://192.168.0.94:8888/TalesOfTheJedi?season=01";
     const response = await fetch(URL2);
     const data2 = await response.json();
     for (var i = 0; i < data2.length; i++) {

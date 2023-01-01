@@ -2,14 +2,15 @@
 import Layout from "../../../../layouts/LayoutPage.astro";
 const URL = "http://192.168.0.94:8888/TNG?season=01";
 const response = await fetch(URL);
-const tng1data = await response.json();
+const data = await response.json();
+ 
 ---
 
 <Layout title="Episodes">
     <main>
         <div class="grid grid-cols-5 gap-2 flex items-center">
             {
-                tng1data.map((d) => (
+                data.map((d) => (
                     <div class="m-4">
                         <button
                             id={d.MediaID}
@@ -25,7 +26,7 @@ const tng1data = await response.json();
 </Layout>
 
 <script>
-    const URL2 = "http://192.168.0.94:8888/TNG?season=01";
+    const URL2 = "http://192.168.0.94:8888/intTNG?season=01";
     const response = await fetch(URL2);
     const data2 = await response.json();
     for (var i = 0; i < data2.length; i++) {
