@@ -12,12 +12,12 @@ const data = await response.json();
             {
                 data.map((d) => (
                     <div class="m-4">
-                        <button
-                            id={d.MediaID}
-                            class="bg-blue-400 p-3 text-white rounded text-xl"
-                        >
-                            {d.title}
-                        </button>
+                        
+                            <button
+                                id={d.MediaID}
+                                class="bg-blue-400 p-3 text-white rounded text-xl"
+                            > 
+                            </button>
                     </div>
                 ))
             }
@@ -36,6 +36,7 @@ const data = await response.json();
         let action = document.getElementById(data2[i]["MediaID"]);
         action.addEventListener("click", () => {
             let response = fetch(addr);
+            // window.location.href = "/tvshowspage";
         });
     }
 </script>
