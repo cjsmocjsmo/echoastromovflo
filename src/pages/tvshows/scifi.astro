@@ -1,25 +1,30 @@
 ---
 import Layout from "../../layouts/LayoutPage.astro";
-import AlienWorldsImg from '../../../images/scifi/alienworlds.webp';
+import AlienWorldsImg from "../../../images/scifi/alienworlds.avif"
 import AlienWorldsCard from '../../components/scifi/AlienWorldsCard.astro';
-import AlteredCarbonImg from '../../../images/scifi/alteredcarbon.webp';
+import AlteredCarbonImg from '../../../images/scifi/alteredcarbon.avif';
 import AlteredCarbonCard from '../../components/scifi/AlteredCarbonCard.astro';
-import CowboyBeBopImg from '../../../images/scifi/cowboy_bebop.webp';
+import CowboyBeBopImg from '../../../images/scifi/cowboy_bebop.avif';
 import CowboyBeBopCard from "../../components/scifi/CowboyBeBop.astro";
-import ForAllManKindImg from '../../../images/scifi/forallmankind.webp';
+import ForAllManKindImg from '../../../images/scifi/forallmankind.avif';
 import ForAllManKindCard from '../../components/scifi/ForAllManKindCard.astro';
-import FoundationImg from '../../../images/scifi/Foundation_1Thumb.webp';
+import FoundationImg from '../../../images/scifi/Foundation_1Thumb.avif';
 import FoundationCard from '../../components/scifi/FoundationCard.astro';
-import HaloImg from '../../../images/scifi/halo.webp';
+import HaloImg from '../../../images/scifi/halo.avif';
 import HaloCard from "../../components/scifi/HaloCard.astro";
-import LostInSpaceImg from '../../../images/scifi/lostinspace.webp';
+import LostInSpaceImg from '../../../images/scifi/lostinspace.avif';
 import LostInSpaceCard from "../../components/scifi/LostInSpaceCard.astro";
-import NightSkyImg from '../../../images/scifi/nightsky.webp';
+import NightSkyImg from '../../../images/scifi/nightsky.avif';
 import NightSkyCard from "../../components/scifi/NightSkyCard.astro";
-import OrvilleImg from '../../../images/scifi/orville.webp';
+import OrvilleImg from '../../../images/scifi/orville.avif';
 import OrvilleCard from "../../components/scifi/OrvilleCard.astro";
-import RaisedByWolvesImg from '../../../images/scifi/raisedbywolves.webp';
+import RaisedByWolvesImg from '../../../images/scifi/raisedbywolves.avif';
 import RaisedByWolvesCard from "../../components/scifi/RaisedByWolvesCard.astro";
+
+
+import TheLastOfUsImg from "../../../images/scifi/lastofus.avif";
+import TheLastOfUsCard from "../../components/scifi/TheLastOfUsCard.astro";
+
 import Playercontrols from "../../components/playercontrols.astro";
 ---
 
@@ -32,10 +37,12 @@ import Playercontrols from "../../components/playercontrols.astro";
 			<ForAllManKindCard title="For All Mankind" src={ForAllManKindImg} />
 			<FoundationCard title="Foundation" src={FoundationImg} />
             <LostInSpaceCard title="Lost In Space" src={LostInSpaceImg} />
-            <NightSkyCard title="Night Sky" src={NightSkyImg} />
-            <OrvilleCard title="Orville" src={OrvilleImg} />
             <RaisedByWolvesCard title="Raised By Wolves" src={RaisedByWolvesImg} />
+            <NightSkyCard title="Night Sky" src={NightSkyImg} />
+            <TheLastOfUsCard title="The Last Of Us" src={TheLastOfUsImg} />
+            <OrvilleCard title="Orville" src={OrvilleImg} />
             <HaloCard title="Halo" src={HaloImg} />
+            
         </div>
         <Playercontrols />
     </main>
