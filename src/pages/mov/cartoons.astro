@@ -3,9 +3,19 @@ import Layout from "../../layouts/LayoutPage.astro";
 const response = await fetch("http://192.168.0.94:8888/Cartoons");
 const data = await response.json();
 ---
+
 <Layout title="Cartoons">
     <main>
-        <div class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center">
+        <!-- <div
+            class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center"
+        >
+            <h1 class="text-white">Tinker Bell</h1>
+            <h1 class="text-white">Charlie Brown</h1>
+        </div> -->
+
+        <div
+            class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center"
+        >
             {
                 data.map((d) => (
                     <div class="m-4">
@@ -23,13 +33,13 @@ const data = await response.json();
 </Layout>
 
 <script>
-    let response = await fetch("http://192.168.0.94:8888/Cartoons")
-    let data = await response.json()
-    let addresses = []
-    for (var ii=0; ii < data.length; ii++) {
-        let foo = data[ii]["filepath"].split("/")
-        let boo = foo[5]
-        addresses.push(boo)
+    let response = await fetch("http://192.168.0.94:8888/Cartoons");
+    let data = await response.json();
+    let addresses = [];
+    for (var ii = 0; ii < data.length; ii++) {
+        let foo = data[ii]["filepath"].split("/");
+        let boo = foo[5];
+        addresses.push(boo);
     }
     let ad = "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=";
     let ad2 = "/media/pi/PiTB/media/Movies/Cartoons/";
