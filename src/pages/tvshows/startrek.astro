@@ -24,15 +24,17 @@ import Playercontrols from "../../components/playercontrols.astro";
 <Layout title="MCU">
     <main>
         <div class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center">
+            
+            <VoyagerCard src={VoyagerImg} title="Voyager" />
+            <STTVCard src={STTVImg} title="Star Trek" />
             <EnterpriseCard src={EnterpriseImg} title="Enterprise" />
             <NextGenCard src={NextGenImg} title="Next Generation" />
             <DiscoveryCard src={DiscoveryImg} title="Discovery" />
             <PicardCard src={PicardImg} title="Picard" />
             <LowerDecksCard src={LowerDecksImg} title="Lower Decks" />
-            <StrangeNewWorldsCard src={StrangeNewWorldsImg} title="Strange New Worlds" />
             <ProdigyCard src={ProdigyImg} title="Prodigy" />
-            <STTVCard src={STTVImg} title="Star Trek" />
-            <VoyagerCard src={VoyagerImg} title="Voyager" />
+            <StrangeNewWorldsCard src={StrangeNewWorldsImg} title="Strange New Worlds" />
+
         </div>
         <Playercontrols />
     </main>
