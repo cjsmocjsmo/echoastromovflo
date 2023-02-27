@@ -35,7 +35,7 @@ const data = await response.json();
         addresses.push(boo);
     }
     let ad = "http://192.168.0.94:8181/OmxplayerPlayMediaReact?medPath=";
-    let ad2 = "/media/pi/PiTB/media/Movies/Cartoons/";
+    let ad2 = "/media/pi/PiTB/media/Movies/Buzz/";
     for (var i = 0; i < addresses.length; i++) {
         let addr = ad + ad2 + addresses[i];
         let moviename = addresses[i].split(" ").join("");
