@@ -1,45 +1,10 @@
 ---
 import Layout from "../../layouts/LayoutPage.astro";
-const response = await fetch("http://192.168.0.94:8888/Cartoons");
+const response = await fetch("http://192.168.0.94:8888/Buzz");
 const data = await response.json();
 ---
 
-<Layout title="Cartoons">
-    <div
-        class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1 flex items-center"
-    >
-        <a href="/mov/tinkerbell">
-            <button
-                class="m-10 p-3.5 rounded-lg bg-slate-700 text-white text-xl"
-                >Tinker Bell</button
-            >
-        </a>
-        <a href="/mov/charliebrown">
-            <button class="m-10 p-3.5 rounded-lg bg-slate-700 text-white text-xl"
-            >Charlie Brown</button
-        >
-        </a>
-        <a href="/mov/minions">
-            <button class="m-10 p-3.5 rounded-lg bg-slate-700 text-white text-xl"
-            >Minions</button
-        >
-        </a>
-
-        <a href="/mov/buzz">
-            <button class="m-10 p-3.5 rounded-lg bg-slate-700 text-white text-xl"
-            >Buzz</button
-        >
-        </a>
-
-        <a href="/mov/classiccartoons">
-            <button class="m-10 p-3.5 rounded-lg bg-slate-700 text-white text-xl"
-            >Classics</button
-        >
-        </a>
-
-
-        
-    </div>
+<Layout title="Buzz">
     <main>
         <div
             class="grid xxsm:grid-cols-2 xsm:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 flex items-center"
@@ -61,7 +26,7 @@ const data = await response.json();
 </Layout>
 
 <script>
-    let response = await fetch("http://192.168.0.94:8888/Cartoons");
+    let response = await fetch("http://192.168.0.94:8888/Buzz");
     let data = await response.json();
     let addresses = [];
     for (var ii = 0; ii < data.length; ii++) {
