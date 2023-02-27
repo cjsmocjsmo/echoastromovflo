@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/LayoutPage.astro";
-const response = await fetch("http://192.168.0.94:8888/ClassicCartoons");
+const response = await fetch("http://192.168.0.94:8888/Oldies");
 const data = await response.json();
 ---
 
@@ -26,7 +26,7 @@ const data = await response.json();
 </Layout>
 
 <script>
-    let response = await fetch("http://192.168.0.94:8888/ClassicCartoons");
+    let response = await fetch("http://192.168.0.94:8888/Oldies");
     let data = await response.json();
     let addresses = [];
     for (var ii = 0; ii < data.length; ii++) {

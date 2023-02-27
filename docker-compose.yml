@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   echoastromovflo:
-    image: echoastromovflo:0.5.3
+    image: echoastromovflo:0.5.4
     build: .
     networks:
       - echoastromovflo
