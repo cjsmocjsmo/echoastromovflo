@@ -1,11 +1,11 @@
 ---
 import Layout from "../../../../layouts/LayoutPage.astro";
-const URL = "http://192.168.0.94:8888/Mandalorian?season=01";
+const URL = "http://192.168.0.94:8888/Mandalorian?season=03";
 const response = await fetch(URL);
 const data = await response.json();
 ---
 
-<Layout title="Season 1">
+<Layout title="Season 3">
     <main>
         <div class="grid grid-cols-5 gap-2 flex items-center">
             {
@@ -25,7 +25,7 @@ const data = await response.json();
 </Layout>
 
 <script>
-    const URL2 = "http://192.168.0.94:8888/Mandalorian?season=01";
+    const URL2 = "http://192.168.0.94:8888/Mandalorian?season=03";
     const response = await fetch(URL2);
     const data2 = await response.json();
     for (var i = 0; i < data2.length; i++) {
